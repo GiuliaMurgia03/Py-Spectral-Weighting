@@ -1,0 +1,3 @@
+smooth_sources_noise_rfi1.fits
+smooth_sources_noise_rfi2.fits
+
