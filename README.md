@@ -1,5 +1,4 @@
-There are two main methods:
-the weighted splat and the weighted merge
+There are two main methods: the weighted splat and the weighted merge.
 
 The weighted splat method consists in:
 1. Open an input fits file, and create an output fits file;
@@ -21,4 +20,4 @@ The weighted merge method consists in:
 5. Close input and output fits files;
 
 Functionalities: Select channel range for splat.
-Particular Features: ”Mini Splat”: to eliminate broadband, but very weak RFI, we implemented a mini splat.
+Particular Features: to eliminate broadband, but very weak RFI, we implemented a ”Mini Splat”
