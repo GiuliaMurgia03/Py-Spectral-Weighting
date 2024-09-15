@@ -20,5 +20,5 @@ The weighted merge method consists in:
    c) Create the final merge image and add it to the output spectral cube
 9. Close input and output fits files;
 
-Functionalities: Select channel range for splat
+Functionalities: Select channel range for splat.
 Particular Features: ”Mini Splat”: to eliminate broadband, but very weak RFI, we implemented a mini splat.
