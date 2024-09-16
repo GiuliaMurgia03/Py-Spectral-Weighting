@@ -220,22 +220,8 @@ class SpectralWeighting:
             # Compute a mini splat of the nearby channels to highlight faint broad-band RFI
             k1 = max(bchan, k - m)
             k2 = min(echan, k + m)
-            """
-            k1 = k - m
-            k2 = k + m
 
-            if k1 < bchan:
-                k1 = bchan
-                k2 = bchan + 2 * m + 1
-            if  k2 > echan:
-                k2 = echan
-                k1 = echan - 2 * m - 1
-            if  k2 > echan:
-                k2 = echan # For safety
-            if  k1 < bchan:
-                k1 = bchan # For safety                    
-            """
-            for kk in range(k1, k2 + 1):
+            for kk in range(k1, k2):
                 image = infits[0].data[kk, :, :].flatten()
                 for i in range(nx*ny):
                     if np.isfinite(image[i]):
@@ -418,7 +404,7 @@ class SpectralWeighting:
         nx = vinfits[0][0].header['NAXIS1']
         ny = vinfits[0][0].header['NAXIS2']
 
-        for k in range(bchan, echan + 1):
+        for k in range(bchan, echan):
             print(f"Working on channel: {k + 1} of {echan + 1}", end='\r')
 
             sum_image = np.zeros(ny*nx, dtype=np.float32)
